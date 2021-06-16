@@ -1,2 +1,2 @@
 # ecoli-classification
-E.coli classification using mlpack library
+E.coli protein classification using mlpack library
