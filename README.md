@@ -1,5 +1,5 @@
 # ecoli-classification
-E.coli protein classification using Decision Tree method with mlpack library. For the original dataset please follow this link below:
+E.coli protein classification using Decision Tree method with mlpack library. For the original dataset please visit link below:
 https://archive.ics.uci.edu/ml/datasets/Ecoli<br>
 
 ## References
