@@ -9,7 +9,7 @@ df.columns = [
     "sequence", "mcg", "gvh", "lip", "chg", "aac", "alm1", "alm2", "class"
 ]
 
-df.iloc[:, -1] = df.iloc[:, -1].apply(pd.to_numeric)
+df.iloc[:, -1] = df.iloc[:, -1]
 y_Train = df.iloc[:, -1]
 x_Train = df.drop(["sequence", "class"], axis=1)
 
