@@ -4,6 +4,7 @@ from mlpack import nbc
 import pandas as pd
 import numpy as np
 
+
 df = pd.read_csv("ecoli.csv", header=None)
 df.columns = [
     "sequence", "mcg", "gvh", "lip", "chg", "aac", "alm1", "alm2", "class"
