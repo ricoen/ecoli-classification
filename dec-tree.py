@@ -10,13 +10,13 @@ df.columns = [
     "sequence", "mcg", "gvh", "lip", "chg", "aac", "alm1", "alm2", "class"
 ]
 
-df.iloc[:, -1] = df.iloc[:, -1]
 y_Train = df.iloc[:, -1]
 x_Train = df.drop(["sequence", "class"], axis=1)
 
 output = mlpack.preprocess_split(input=x_Train,
                                  input_labels=y_Train,
                                  test_ratio=0.3)
+
 training_set = output["training"]
 training_labels = output["training_labels"]
 test_set = output["test"]
@@ -27,6 +27,7 @@ param_dec_tree = decision_tree(training=training_set,
                                       print_training_accuracy=True,
                                       maximum_depth=5,
                                       minimum_leaf_size=10)
+
 dt_model = param_dec_tree["output_model"]
 
 predict_dt = decision_tree(input_model=dt_model, test=test_set)
